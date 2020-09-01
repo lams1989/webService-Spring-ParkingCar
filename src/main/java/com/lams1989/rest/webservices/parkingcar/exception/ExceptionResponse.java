@@ -1,4 +1,4 @@
-package com.lams1989.rest.webservices.parkingcars.exception;
+package com.lams1989.rest.webservices.parkingcar.exception;
 
 import java.util.Date;
 

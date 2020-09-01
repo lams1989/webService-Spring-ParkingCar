@@ -6,13 +6,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name="Ticket")
-public class ParkingCar {
-	
+public class Ticket {
+
 	@Id
 	@GeneratedValue
 	private Integer id;
@@ -24,22 +22,22 @@ public class ParkingCar {
 	private String brand;
 
 	@Size(min = 3, max = 50, message = "the registry me must be between 3 and 50 characters")
-	@Column(name="Oner_name")
+	@Column(name = "owner_name")
 	private String ownerName;
-	
-	@Column(name="Entry_date")
+
+	@Column(name = "entry_date")
 	private Date entryDate;
 
-	@Column(name="Out_date")
+	@Column(name = "out_date")
 	private Date outDate;
-	
+
 	private Long payment;
 
-	public ParkingCar() {
+	public Ticket() {
 		super();
 	}
 
-	public ParkingCar(Integer id, String registry, String brand, String ownerName, Date entryDate, Date outDate,
+	public Ticket(Integer id, String registry, String brand, String ownerName, Date entryDate, Date outDate,
 			Long payment) {
 		super();
 		this.id = id;

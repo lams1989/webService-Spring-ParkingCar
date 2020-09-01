@@ -31,3 +31,34 @@ build/
 
 ### VS Code ###
 .vscode/
+
+##############################
+## Java
+##############################
+.mtj.tmp/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+
+##############################
+## Eclipse
+##############################
+.settings/
+bin/
+tmp/
+build/
+.metadata
+.classpath
+.project
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.factorypath
+target/
+

@@ -1,4 +1,4 @@
-package com.lams1989.rest.webservices.parkingcars.exception;
+package com.lams1989.rest.webservices.parkingcar.exception;
 
 import java.util.Date;
 
@@ -25,11 +25,11 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 		}
 
-		@ExceptionHandler(CarNotFoundException.class)
+		@ExceptionHandler(CarIsParkingNowException.class)
 		public final ResponseEntity<Object> handleNotFoundException(Exception ex, WebRequest request) {
 			ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
 					request.getDescription(false));
-			return new ResponseEntity(exceptionResponse, HttpStatus.NOT_FOUND);
+			return new ResponseEntity(exceptionResponse, HttpStatus.BAD_REQUEST);
 
 		}
 
