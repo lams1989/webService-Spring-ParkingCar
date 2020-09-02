@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lams1989.rest.webservices.parkingcar.beans.Ticket;
-import com.lams1989.rest.webservices.parkingcar.exception.TicketNotFoundException;
 import com.lams1989.rest.webservices.parkingcar.service.ParkingCarService;
 
 @RestController

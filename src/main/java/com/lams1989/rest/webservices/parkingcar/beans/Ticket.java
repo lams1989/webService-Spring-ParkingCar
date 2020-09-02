@@ -1,6 +1,6 @@
 package com.lams1989.rest.webservices.parkingcar.beans;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,10 +26,10 @@ public class Ticket {
 	private String ownerName;
 
 	@Column(name = "entry_date")
-	private Date entryDate;
+	private LocalDateTime entryDate;
 
 	@Column(name = "out_date")
-	private Date outDate;
+	private LocalDateTime outDate;
 
 	private Long payment;
 
@@ -37,7 +37,7 @@ public class Ticket {
 		super();
 	}
 
-	public Ticket(Integer id, String registry, String brand, String ownerName, Date entryDate, Date outDate,
+	public Ticket(Integer id, String registry, String brand, String ownerName, LocalDateTime entryDate, LocalDateTime outDate,
 			Long payment) {
 		super();
 		this.id = id;
@@ -81,19 +81,19 @@ public class Ticket {
 		this.ownerName = ownerName;
 	}
 
-	public Date getEntryDate() {
+	public LocalDateTime getEntryDate() {
 		return entryDate;
 	}
 
-	public void setEntryDate(Date entryDate) {
+	public void setEntryDate(LocalDateTime entryDate) {
 		this.entryDate = entryDate;
 	}
 
-	public Date getOutDate() {
+	public LocalDateTime getOutDate() {
 		return outDate;
 	}
 
-	public void setOutDate(Date outDate) {
+	public void setOutDate(LocalDateTime outDate) {
 		this.outDate = outDate;
 	}
 
