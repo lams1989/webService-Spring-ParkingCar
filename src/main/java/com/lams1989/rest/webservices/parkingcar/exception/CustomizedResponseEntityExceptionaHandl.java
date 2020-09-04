@@ -17,6 +17,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 	@RestController
 	public class CustomizedResponseEntityExceptionaHandl extends ResponseEntityExceptionHandler {
 
+		@SuppressWarnings({ "unchecked", "rawtypes" })
 		@ExceptionHandler(Exception.class)
 		public final ResponseEntity<Object> handleAllException(Exception ex, WebRequest request) {
 			ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
@@ -25,6 +26,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 		}
 
+		@SuppressWarnings({ "unchecked", "rawtypes" })
 		@ExceptionHandler(CarIsParkingNowException.class)
 		public final ResponseEntity<Object> handleNotFoundException(Exception ex, WebRequest request) {
 			ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
@@ -34,6 +36,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 		}
 
 		@Override
+		@SuppressWarnings({ "unchecked", "rawtypes" })
 		public ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers,
 				HttpStatus status, WebRequest request) {
 			ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), "Validation fails",
