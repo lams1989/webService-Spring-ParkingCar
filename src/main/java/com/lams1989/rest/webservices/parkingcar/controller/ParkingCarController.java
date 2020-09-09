@@ -13,6 +13,7 @@ import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -56,5 +57,14 @@ public class ParkingCarController {
 		return ticket;
 	}
 	
+	@PutMapping("/parkingcars/{registry}")
+	public TicketDto getPayment(@PathVariable String registry) {
+		logger.info(message.getMessage("info.parking.car.getid.info", null, LocaleContextHolder.getLocale()));
+		
+
+		TicketDto ticket = service.setPayment(registry);
+		return ticket;
+
+	}
 	
 }

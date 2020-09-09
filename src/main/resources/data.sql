@@ -1,2 +1,2 @@
-INSERT INTO `parkingcar`.`ticket` (`id`, `registry`, `brand`, `owner_name`, `entry_date`) VALUES ('1000', 'noq-82a', 'honda', 'junior', '2020-09-03 22:00:00.000000');
-INSERT INTO `parkingcar`.`ticket` (`id`, `registry`, `brand`, `owner_name`, `entry_date`) VALUES ('1002', 'xxp-25', 'yamaha', 'luis', '2020-09-03 15:00:00.000000');
+INSERT INTO `parkingcar`.`ticket` (`id`, `registry`, `brand`, `owner_name`, `entry_date`) VALUES ('1000', 'noq-82a', 'honda', 'junior', '2020-09-07 12:00:00.000000');
+INSERT INTO `parkingcar`.`ticket` (`id`, `registry`, `brand`, `owner_name`, `entry_date`) VALUES ('1002', 'xxp-25', 'yamaha', 'luis', '2020-09-07 12:00:00.000000');

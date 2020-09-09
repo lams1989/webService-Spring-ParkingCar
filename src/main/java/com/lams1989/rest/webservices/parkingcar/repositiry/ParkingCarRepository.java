@@ -14,5 +14,8 @@ public interface ParkingCarRepository extends JpaRepository<Ticket, Integer> {
 	
 	List<Ticket> findByRegistryAndOutDateIsNull(String registry);
 	
+	List<Ticket> findByRegistryAndOutDateIsNotNull(String registry);
+
+	
 
 }

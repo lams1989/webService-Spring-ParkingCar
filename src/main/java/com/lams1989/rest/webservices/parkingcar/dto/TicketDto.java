@@ -20,14 +20,16 @@ public class TicketDto {
 		super();
 	}
 
-	public TicketDto(Integer id, String registry, String brand, String ownerName, LocalDateTime entryDate) {
+	public TicketDto(String registry, String brand, String ownerName, LocalDateTime entryDate,
+			LocalDateTime outDate, Long payment, String timeElapsed) {
 		super();
-		this.id = id;
 		this.registry = registry;
 		this.brand = brand;
 		this.ownerName = ownerName;
 		this.entryDate = entryDate;
-
+		this.outDate = outDate;
+		this.payment = payment;
+		this.timeElapsed = timeElapsed;
 	}
 
 	public String getTimeElapsed() {
